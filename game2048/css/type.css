@@ -1,0 +1,68 @@
+.thisTable {
+    border: 1px solid #ccc;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-collapse: collapse;
+    background-color: beige;
+}
+
+.thisTable tr td {
+    height: 70px;
+    width: 100px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 50px;
+}
+
+#actionType {
+    top: 3%;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+#score {
+    top: 10%;
+    font-size: larger;
+    padding-bottom: 15px;
+}
+
+hr {
+    margin-bottom: 15px;
+}
+
+#tableNumber {
+    top: 25%;
+    margin-bottom: 30px;
+}
+
+
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: url(../photos/wallhaven-2yk58y.png);
+    background-size: contain;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+#leftTableList {
+    text-align: center;
+    background-color: rgb(213, 154, 154);
+    border-radius: 20px;
+    position: absolute;
+    width: 300px;
+    left: 15%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+}
+#gameTable{
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+    position: absolute;
+}

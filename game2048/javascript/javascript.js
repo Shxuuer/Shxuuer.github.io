@@ -4,22 +4,47 @@ $(document).ready(function () {
     let nums = [];
     initList();
     //用于保存鼠标点击的位置
-    var startX, startY;
+    let startX, startY;
     //表格是否已经填满,游戏是否结束，游戏得分
-    let isFulled = 0,isFail = 0,score = 0;
+    let isFulled = 0, isFail = 0, score = 0;
     //初始化图表
     getRandNum();
     //按下鼠标时，按照位置差值计算移动方式
-    $("#gameTable").mousedown(function (e) {
+    $("#gameTable").mousedown(PCStartPosition).mouseup(PCReflectAction);
+    $(".thisTable").touchstart(mobStartPosition).touchend(mobReflectAction);
+    //触摸时，按照位置差值计算移动方式
+
+    function PCStartPosition(e) {
         startX = e.pageX;
         startY = e.pageY;
-    }).mouseup(function (e) {
-        if ($(this) === $("#leftTableList *")) {
+    }
+
+    function mobStartPosition(e) {
+        e.preventDefault();
+        startX = e.originalEvent.targetTouches[0].pageX;
+        startY = e.originalEvent.targetTouches[0].pageY;
+    }
+
+    function mobReflectAction(e) {
+        e.preventDefault();
+        let endX = e.originalEvent.changedTouches[0].pageX, endY = e.originalEvent.changedTouches[0].pageY;
+        if (e === $("#leftTableList *") || (startX === endX && startY === endY)) {
             return;
         }
+        reflectAction(endX, endY);
+    }
+
+    function PCReflectAction(e) {
+        if (e === $("#leftTableList *") || (startX === e.pageX && startY === e.pageY)) {
+            return;
+        }
+        reflectAction(e.pageX, e.pageY);
+    }
+
+    function reflectAction(endX, endY) {
         if (!isFail) {
-            if (Math.abs(startX - e.pageX) > Math.abs(startY - e.pageY)) {
-                if (startX > e.pageX) {
+            if (Math.abs(startX - endX) > Math.abs(startY - endY)) {
+                if (startX > endX) {
                     goNow("left");
                     $("#actionType").text("操作状态:left");
                 } else {
@@ -27,7 +52,7 @@ $(document).ready(function () {
                     $("#actionType").text("操作状态:right");
                 }
             } else {
-                if (startY > e.pageY) {
+                if (startY > endY) {
                     goNow("up");
                     $("#actionType").text("操作状态:up");
                 } else {
@@ -39,13 +64,13 @@ $(document).ready(function () {
             getFail();
             getRandNum();
         }
-    });
+    }
 
     //重新开始
     $("#restart").click(function (e) {
         let temp = $("#tableNumber").val();
         if (temp > 1) {
-            if (temp > 10)alert("图表过大可能无法正常显示!");
+            if (temp > 10) alert("图表过大可能无法正常显示!");
             tableSize = temp;
             $(".thisTable").empty();
             score = 0;
@@ -53,7 +78,7 @@ $(document).ready(function () {
             isFail = 0;
             isFulled = 0;
             getRandNum();
-        }else alert("请输入大于1的数");
+        } else alert("请输入大于1的数");
     });
 
     //初始化nums数组,初始化表格
@@ -79,14 +104,14 @@ $(document).ready(function () {
     //获取每一个元素临近数值，判断游戏是否结束
     function getFail() {
         if (isFulled) {
-            for (let i = 0; i < - 1; ++i) {
+            for (let i = 0; i < -1; ++i) {
                 for (let j = 0; j < tableSize - 1; ++j) {
                     if (nums[i][j] == nums[i][j + 1]) {
                         return;
                     }
                 }
             }
-            for (let i = 0; i < - 1; ++i) {
+            for (let i = 0; i < -1; ++i) {
                 for (let j = 0; j < tableSize - 1; ++j) {
                     if (nums[i][j] == nums[i + 1][j]) {
                         return;
@@ -151,7 +176,7 @@ $(document).ready(function () {
         return thisnums;
     }
 
-    function getNewList(action,i) {
+    function getNewList(action, i) {
         let thisnums = [];
         let numberCount = 0;
         //将这一列不为零的数复制到thisnums中
@@ -182,7 +207,7 @@ $(document).ready(function () {
 
     function goNow(action) {
         for (let i = 0; i < tableSize; ++i) {
-            let returnResult = getNewList(action,i);
+            let returnResult = getNewList(action, i);
             //将不为0的数复制到nums中
             let thisNumberCount = 0;
             for (let j = 0; j < returnResult[1]; ++j) {

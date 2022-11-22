@@ -4,7 +4,16 @@
   <meta charset="UTF-8">
   <link rel="icon" href="photos/favicon.ico">
   <link rel="stylesheet" href="css/type.css">
-  <script type="text/javascript" src="javascript/jquery.js"></script>
+  <script type="text/javascript">
+  </script>
+  <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript">
+    //去除jquery mobile的默认样式
+    $(document).ready(function (){
+      $("input").attr('data-role', 'none');
+    });
+  </script>
+  <script type="text/javascript" src="https://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
   <script type="text/javascript" src="javascript/javascript.js"></script>
   <title>HomeWork2:2048</title>
 </head>
@@ -14,12 +23,13 @@
     <table class="thisTable"></table>
   </div>
   <div id="leftTableList">
+    <span id="gameName">2048</span><div id="author">@author BUPT-shenxu</div>
     <div id="actionType">操作状态:null</div>
     <div id="score">得分:0</div>
     <hr>
     <div>行列数设置</div>
     <input type="number" id="tableNumber" value="4">
-    <button id="restart">重新开始</button>
+    <input type="button" id="restart" value="重新开始">
   </div>
 </body>
 

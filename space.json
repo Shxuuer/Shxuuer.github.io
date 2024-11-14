@@ -1,9 +1,29 @@
 {
     "news": [
         {
-            "title": "SpaceX",
+            "title": "很爱这座城市，或许以后住在这了呢？",
             "img": "cover.jpg",
-            "date": "2024-11-14"
+            "date": "2024-11-9"
+        },
+        {
+            "title": "日出东方",
+            "img": "sun.jpg",
+            "date": "2024-11-9"
+        },
+        {
+            "title": "喜欢做正反馈的事，比如舒适的工作环境",
+            "img": "desktop.jpg",
+            "date": "2024-10-30"
+        },
+        {
+            "title": "团建",
+            "img": "tuanjian.jpg",
+            "date": "2024-10-12"
+        },
+        {
+            "title": "鲜活的小生命",
+            "img": "mumu.jpg",
+            "date": "2024-9-29"
         }
     ]
 }

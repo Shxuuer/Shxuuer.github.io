@@ -1,23 +1,24 @@
-let height = window.innerHeight
-let width = window.innerWidth
-
 // 禁止右键、禁止复制
 document.oncontextmenu = function () { return false }
 document.onselectstart = function () { return false }
 
-// 封面自适应
+if (window.innerWidth < window.innerHeight) {
+    document.getElementById("cover-img").src="./img/cover-m.jpg"
+}
+
+// 窗口大小改变时
 window.onresize = function () {
-    height = window.innerHeight
-    width = window.innerWidth
-    const cover = document.getElementById("cover")
-    // cover.style.height = height + "px"
-    // cover.style.width = width + "px"
+    if (window.innerWidth < window.innerHeight) {
+        document.getElementById("cover-img").src="./img/cover-m.jpg"
+    } else {
+        document.getElementById("cover-img").src="./img/cover.jpg"
+    }
 }
 
 // 滚动到下一页
 document.getElementById("scroll-down-icon").addEventListener('click', function () {
     window.scrollTo({
-        top: height,
+        top: window.innerHeight,
         behavior: 'smooth'
     })
 })

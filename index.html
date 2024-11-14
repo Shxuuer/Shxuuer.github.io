@@ -19,22 +19,82 @@
     <div style="position: absolute;width: 100%;">
 
         <div style="width: 100%;height: 100vh;display: flex;flex-direction: column;align-items: center;position: relative;">
+            <!-- 头 -->
+            <div style="position: absolute;top: 0;width: 100%;padding-top: 30px;display: flex;">
+                <div style="margin-left: 15vw;">
+                    <img src="https://avatars.githubusercontent.com/u/72177904" style="width: 64px;height: 64px;border-radius: 8px;"></img>
+                </div>
+                <div style="color: #fff;display: flex;flex-direction: column;font-size: 30px;margin-left: 10px;">
+                    <span style="line-height: 32px;">
+                        Shen
+                    </span>
+                    <span style="line-height: 32px;">
+                        Xu
+                    </span>
+                </div>
+            </div>
+            <!-- 中央标题 -->
             <div id="title" style="width: 100%;display: flex;flex-direction: column;align-items: center;position: relative;margin-top: 30vh;">
                 <div>
                     <h1 style="color: #fff;font-weight: 400;font-size: 76px;text-align: center;">生命万岁.</h1>
                 </div>
                 <div style="background-color: #10ff10;width: 12%;height: 5px;margin-top: 20px;border-radius: 3px;"></div>
-                <div style="color: #e3e3e3;text-align: center;margin-top: 20px;">/*沈旭的个人主页*/</div>
+                <div style="color: #e3e3e3;text-align: center;margin-top: 20px;">/*Viva La Vida*/</div>
             </div>
             <!-- 向下的尖角号 -->
-            <div style="position: absolute;width: 0;height: 0;border-left: 20px solid transparent;border-right: 20px solid transparent;border-top: 20px solid #fff;bottom: 20px;"></div>
+            <span id="scroll-down-icon" role="button" title="深入了解"></span>
         </div>
 
-        <div id="content" style="background-color: #fff;position: relative;height: 100vh;">
-            123
+        <div id="content" style="background-color: #fff;position: relative;">
+            <!-- 关于我 -->
+            <div class="uni-section">
+                <div class="uni-title">About Me</div>
+                <ul id="labels">
+                    <li>00后</li><li>理工男</li><li>BUPT</li>
+                </ul>
+                <div style="margin-top: 30px;display: flex;flex-direction: column;align-items: center;gap: 10px;">
+                    <span>不懂浪漫，是个俗人</span>
+                    <span>每日浑浑噩噩，就爱给别人当个乐子</span>
+                    <span>事事不顺心，事事不如意</span>
+                    <span>白日幻想家，做梦成为人生赢家</span>
+                    <span>被现实按在地上摩擦</span>
+                    <span>但依然热爱生活</span>
+                    <span>依然热爱生命</span>
+                    <span>依然幻想着能在世界上留下足迹</span>
+                </div>
+            </div>
+            <!-- 动态 -->
+            <div class="uni-section" style="display: flex;flex-direction: column;align-items: center;position: relative;padding: 100px 30px;">
+                <div class="uni-title">My Space</div>
+                <div style="width: 80vw;display: flex;flex-wrap: wrap;justify-content: space-between;" id="space-container">
+                    
+                    <div class="space-card">
+                        <div>
+                            <img src="./img/cover.jpg" alt="">
+                        </div>
+                        <div>
+                            <p>这是一段测试文本，是个标题</p>
+                        </div>
+                        <div>
+                            <span>2021-10-10</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 </body>
  
 <script src="index.js"></script>
 </html>
+
+
+
+
+
+
+
+
+
+

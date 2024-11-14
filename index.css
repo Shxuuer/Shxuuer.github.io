@@ -2,3 +2,89 @@
     padding: 0;
     margin: 0;
 }
+
+#scroll-down-icon {
+    position: absolute;
+    left: calc(50% - 10px);
+    border-right: 3px solid;
+    border-top: 3px solid;
+    border-color: rgba(255, 255, 255, .5);
+    border-radius: 2px;
+    box-sizing: unset;
+    height: 20px;
+    width: 20px;
+    transform: rotate(135deg);
+    cursor: pointer;
+    transition: .25s;
+    animation: 2s 2s;
+    bottom: 40px;
+}
+
+#scroll-down-icon:hover {
+    bottom: 30px;
+    border-color: #fff;
+}
+
+#labels {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#labels li {
+    margin-left: 10px;
+    line-height: 1.5em;
+    list-style: none;
+    padding: 5px 20px;
+    background-color: #e3e3e3;
+    border-radius: 5px;
+}
+
+.uni-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 100px 30px 0 30px;
+}
+
+.uni-title{
+    font-size: 25px;
+}
+
+.uni-title::after {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 4px;
+    background-color: #10ff10;
+    margin: 20px auto;
+    margin-bottom: 30px;
+}
+
+.space-card {
+    width: 32%;
+    background-color: #f3f3f3;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+.space-card div:nth-child(1) img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.space-card div:nth-child(2) {
+    margin: 10px 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.space-card div:nth-child(3) {
+    float: right;
+    margin: 10px 30px;
+}

@@ -23,7 +23,6 @@ img {
     -webkit-user-drag: none;
     -moz-user-drag: none;
     -ms-user-drag: none;
-    user-drag: none;    
 }
 
 /* 下滑按钮 */
@@ -93,7 +92,6 @@ img {
 
 #labels li:hover {
     background-color: #d3d3d3;
-    /* 浮动效果 */
     transform: translateY(-3px);
 }
 

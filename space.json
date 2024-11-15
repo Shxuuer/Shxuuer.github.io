@@ -1,17 +1,12 @@
 {
     "news": [
         {
-            "title": "徒步20公里",
-            "img": "tubu.jpg",
-            "date": "2024-11-13"
-        },
-        {
             "title": "青岛",
             "img": "cover.jpg",
             "date": "2024-11-9"
         },
         {
-            "title": "日出东方",
+            "title": "日出",
             "img": "sun.jpg",
             "date": "2024-11-9"
         },
@@ -21,7 +16,7 @@
             "date": "2024-11-1"
         },
         {
-            "title": "舒适的工作环境",
+            "title": "舒适",
             "img": "desktop.jpg",
             "date": "2024-10-30"
         },
@@ -31,7 +26,7 @@
             "date": "2024-10-12"
         },
         {
-            "title": "内蒙古",
+            "title": "内蒙",
             "img": "neimenggu.jpg",
             "date": "2024-8-9"
         },
@@ -54,6 +49,11 @@
             "title": "淄博",
             "img": "zibo.jpg",
             "date": "2023-2-20"
+        },
+        {
+            "title": "北京",
+            "img": "tubu.jpg",
+            "date": "2022-11-13"
         },
         {
             "title": "德州",

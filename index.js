@@ -28,6 +28,18 @@ fetch("./space.json").then(response => response.json()).then(data => {
     })
 })
 
+fetch("./githubInfo/1.svg").then(response => response.text()).then(data => {
+    if (!data) { return }
+    document.getElementById("github-container").innerHTML += data
+})
+
+fetch("./githubInfo/2.svg").then(response => response.text()).then(data => {
+    if (!data) { return }
+    document.getElementById("github-container").innerHTML += data
+})
+
+
+
 // 窗口加载完后图片逐渐拉远
 window.onload = function () {
     setTimeout(() => {

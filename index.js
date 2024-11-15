@@ -1,14 +1,12 @@
-const imgBed = "https://cdn.jsdelivr.net/gh/Shxuuer/picx-images-hosting@master/"
+const IMG_BED = "https://cdn.jsdelivr.net/gh/Shxuuer/picx-images-hosting@master/"
 
-// 禁止右键、禁止复制
-document.oncontextmenu = function () { return false }
-document.onselectstart = function () { return false }
-
-// 窗口大小改变时更换封面
-document.getElementById("cover-img").src = imgBed + (window.innerWidth < window.innerHeight?"cover-m.jpg":"cover.jpg")
+// 禁止右键、禁止复制、封边图片
+document.oncontextmenu = ()=>false
+document.onselectstart = ()=>false
+document.getElementById("cover-img").src = `${IMG_BED}cover${window.innerWidth < window.innerHeight?"-m":""}.jpg`
 
 // 滚动到下一页
-document.getElementById("scroll-down-icon").addEventListener('click', function () {
+document.getElementById("scroll-down-icon").addEventListener('click', () => {
     window.scrollTo({
         top: window.innerHeight,
         behavior: 'smooth'
@@ -16,31 +14,23 @@ document.getElementById("scroll-down-icon").addEventListener('click', function (
 })
 
 // 获取空间信息
-const space = document.getElementById("space-container")
 fetch("./space.json").then(response => response.json()).then(data => {
     if (!data) { return }
     const space = document.getElementById("space-container")
     data.news.forEach(element => {
         space.innerHTML += `
             <div class="space-card">
-                <div>
-                    <img src="${imgBed}space/${element.img}" alt="">
-                </div>
-                <div>
-                    <p>${element.title}</p>
-                </div>
-                <div>
-                    <span>${element.date}</span>
-                </div>
+                <div><img src="${IMG_BED}space/${element.img}" alt=""></div>
+                <div><p>${element.title}</p></div>
+                <div><span>${element.date}</span></div>
             </div>
         `
-    });
+    })
 })
 
 // 窗口加载完后图片逐渐拉远
 window.onload = function () {
     setTimeout(() => {
-        document.getElementById("cover-img").style.transition = "all 2s"
-        document.getElementById("cover-img").style.transform = "scale(1)"            
-    }, 500);
+        document.getElementById("cover-img").style.transform = "scale(1)"
+    }, 500)
 }

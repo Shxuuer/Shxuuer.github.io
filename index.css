@@ -1,11 +1,17 @@
+/* 通用 */
 * {
     padding: 0;
     margin: 0;
+    cursor: default;
 }
 
 a {
     text-decoration: none;
     color: #000;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 a:visited {
@@ -13,6 +19,7 @@ a:visited {
     text-decoration: none;
 }
 
+/* 下滑按钮 */
 #scroll-down-icon {
     position: absolute;
     left: calc(50% - 10px);
@@ -26,20 +33,43 @@ a:visited {
     transform: rotate(135deg);
     cursor: pointer;
     transition: .25s;
-    animation: 2s 2s;
+    animation: float 2s infinite;
     bottom: 40px;
+}
+
+@keyframes float {
+    0% {
+        bottom: 40px;
+    }
+
+    30% {
+        bottom: 30px;
+    }
+
+    40% {
+        bottom: 30px;
+    }
+
+    100% {
+        bottom: 40px;
+    }
 }
 
 #scroll-down-icon:hover {
     bottom: 30px;
     border-color: #fff;
+    animation: none;
 }
 
+
+
+/* 个人标签 */
 #labels {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 #labels li {
@@ -51,6 +81,7 @@ a:visited {
     border-radius: 5px;
     transition: .5s;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
 #labels li:hover {
@@ -59,12 +90,13 @@ a:visited {
     transform: translateY(-3px);
 }
 
+/* 子区域 */
 .uni-section{
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    padding: 100px 30px 0 30px;
+    padding: 100px 0 0 0;
 }
 
 .uni-title{
@@ -81,6 +113,7 @@ a:visited {
     margin-bottom: 30px;
 }
 
+/* 空间 */
 .space-card {
     width: 500px;
     background-color: #f3f3f3;

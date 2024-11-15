@@ -37,3 +37,10 @@ fetch("./space.json").then(response => response.json()).then(data => {
     });
 })
 
+// 窗口加载完后图片逐渐拉远
+window.onload = function () {
+    setTimeout(() => {
+        document.getElementById("cover-img").style.transition = "all 2s"
+        document.getElementById("cover-img").style.transform = "scale(1)"            
+    }, 500);
+}

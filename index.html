@@ -7,19 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shxuuer's Space</title>
     <!-- 图标 -->
-    <link rel="icon" href="https://cdn.jsdelivr.net/gh/Shxuuer/picx-images-hosting@master/icon.svg" type="image/x-icon">
+    <link rel="icon" href="./img/icon.svg" type="image/x-icon">
     <link rel="stylesheet" href="index.css">
 </head>
  
 <body>
     <div style="position: fixed;width: 100%;height: 100vh;display: flex;justify-content: center;align-items: center;">
-        <img alt="" id="cover-img" style="object-fit: cover;width: 100%;height: 100%;">
+        <img alt="" id="cover-img" style="object-fit: cover;width: 100%;height: 100%;transform: scale(1.2);">
         <div id="cover-filter" style="position: absolute;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.5);"></div>
     </div>
     
     
     <div style="position: absolute;width: 100%;">
-
+        <!-- 封面 -->
         <div style="width: 100%;height: 100vh;display: flex;flex-direction: column;align-items: center;position: relative;">
             <!-- 头 -->
             <div style="position: absolute;top: 0;width: 100%;padding-top: 50px;display: flex;">
@@ -41,12 +41,12 @@
                     <h1 style="color: #fff;font-weight: 400;font-size: 76px;text-align: center;">生命万岁.</h1>
                 </div>
                 <div style="background-color: #10ff10;width: 12%;height: 5px;margin-top: 20px;border-radius: 3px;"></div>
-                <div style="color: #e3e3e3;text-align: center;margin-top: 20px;">/*Viva La Vida*/</div>
+                <div style="color: #e3e3e3;text-align: center;margin-top: 20px;">/*带着相机和好心情环游世界*/</div>
             </div>
             <!-- 向下的尖角号 -->
             <span id="scroll-down-icon" role="button" title="深入了解"></span>
         </div>
-
+        <!-- 主界面 -->
         <div id="content" style="background-color: #fff;position: relative;">
             <!-- 关于我 -->
             <div class="uni-section">
@@ -68,10 +68,9 @@
                 </div>
             </div>
             <!-- 动态 -->
-            <div class="uni-section" style="display: flex;flex-direction: column;align-items: center;position: relative;padding: 100px 30px;">
+            <div class="uni-section">
                 <div class="uni-title">My Recent</div>
-                <div style="width: 80vw;display: flex;flex-wrap: wrap;justify-content: space-around;" id="space-container">
-                </div>
+                <div style="width: 90vw;display: flex;flex-wrap: wrap;justify-content: space-around;" id="space-container"></div>
             </div>
         </div>
     </div>

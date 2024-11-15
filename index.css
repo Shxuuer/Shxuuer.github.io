@@ -144,3 +144,8 @@ img {
     float: right;
     margin: 10px 30px;
 }
+
+/* github */
+#github-container svg {
+    max-width: 90vw;
+}

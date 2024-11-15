@@ -1,7 +1,8 @@
-// sm.ms 图床
+const IMG_BED = "https://cdn.jsdelivr.net/gh/Shxuuer/picx-images-hosting@master/"
+
 // 禁止右键、禁止复制、封边图片
 function changeCoverImg() {
-    document.getElementById("cover-img").src = window.innerWidth < window.innerHeight?"https://s2.loli.net/2024/11/15/8RqvYS3XDmrBfM2.jpg":"https://s2.loli.net/2024/11/15/Yk2fEQilAoq7hpK.jpg"
+    document.getElementById("cover-img").src = `${IMG_BED}cover${window.innerWidth < window.innerHeight?"-m":""}.jpg`
 }
 changeCoverImg()
 document.oncontextmenu = ()=>false
@@ -23,7 +24,7 @@ fetch("./space.json").then(response => response.json()).then(data => {
     data.news.forEach(element => {
         space.innerHTML += `
             <div class="space-card">
-                <div><img src="${element.img}" alt=""></div>
+                <div><img src="${IMG_BED}space/${element.img}" alt=""></div>
                 <div><p>${element.title}</p></div>
                 <div><span>${element.date}</span></div>
             </div>

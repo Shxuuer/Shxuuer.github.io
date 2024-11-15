@@ -2,67 +2,67 @@
     "news": [
         {
             "title": "中国-青岛",
-            "img": "https://s2.loli.net/2024/11/15/26pYBs7glSV1CLr.jpg",
+            "img": "shandong-qingdao.jpg",
             "date": "2024-11-9"
         },
         {
             "title": "日出",
-            "img": "https://s2.loli.net/2024/11/15/J4T8mQGfANReg7K.jpg",
+            "img": "sun.jpg",
             "date": "2024-11-9"
         },
         {
             "title": "舒适",
-            "img": "https://s2.loli.net/2024/11/15/andgeET9AtzLsFf.jpg",
+            "img": "desktop.jpg",
             "date": "2024-10-30"
         },
         {
             "title": "内蒙古",
-            "img": "https://s2.loli.net/2024/11/15/1PFQqdZhYSm3Asy.jpg",
+            "img": "neimeng.jpg",
             "date": "2024-8-9"
         },
         {
             "title": "山西-大同",
-            "img": "https://s2.loli.net/2024/11/15/DcujCASMQ3L1iph.jpg",
+            "img": "shanxi-datong.jpg",
             "date": "2024-8-7"
         },
         {
             "title": "湖南-长沙",
-            "img": "https://s2.loli.net/2024/11/15/FbGukCo1IhA96wc.jpg",
+            "img": "hunan-changsha.jpg",
             "date": "2024-8-1"
         },
         {
             "title": "天津-滨海",
-            "img": "https://s2.loli.net/2024/11/15/TjfOa9NctU6wJWX.jpg",
+            "img": "tianjin-binhai.jpg",
             "date": "2023-12-25"
         },
         {
             "title": "山东-泰安",
-            "img": "https://s2.loli.net/2024/11/15/uQOU3RtPSXjxTFw.jpg",
+            "img": "shandong-taian.jpg",
             "date": "2023-8-21"
         },
         {
             "title": "河北-秦皇岛",
-            "img": "https://s2.loli.net/2024/11/15/AIwoLOGSlKkaJen.jpg",
+            "img": "hebei-qinhuangdao.jpg",
             "date": "2023-6-1"
         },
         {
             "title": "山东-淄博",
-            "img": "https://s2.loli.net/2024/11/15/Sc8YVQO1FMUTGPr.jpg",
+            "img": "shandong-zibo.jpg",
             "date": "2023-2-20"
         },
         {
             "title": "北京",
-            "img": "https://s2.loli.net/2024/11/15/2cfuaMlebCUgrFq.jpg",
+            "img": "beijing.jpg",
             "date": "2022-11-13"
         },
         {
             "title": "山东-德州",
-            "img": "https://s2.loli.net/2024/11/15/voeJ5LsfdA4b7Vx.jpg",
+            "img": "shandong-dezhou.jpg",
             "date": "2022-8-6"
         },
         {
             "title": "山东-济南",
-            "img": "https://s2.loli.net/2024/11/15/7Jr9Y2Om4HG5PzT.jpg",
+            "img": "shandong-jinan.jpg",
             "date": "2020-7-17"
         }
     ]

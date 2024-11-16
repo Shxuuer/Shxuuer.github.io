@@ -20,7 +20,7 @@ fetch("./space.json").then(response => response.json()).then(data => {
     // 空间卡片点击事件
     document.querySelectorAll(".space-card").forEach((element,index) => {
         element.addEventListener('click', (e) => {
-            const index = e.currentTarget.getAttribute("spaceCardIndex")
+            const index = Number(e.currentTarget.getAttribute("spaceCardIndex"))
             imgIndex = index
             openImg(data.news[index].img)
         })
@@ -44,8 +44,6 @@ function closeImg() {
 
 // 改变img.src
 function altImg(num) {
-    imgIndex += num
-    if (imgIndex < 0) { imgIndex = spaceData.news.length - 1 }
-    if (imgIndex >= spaceData.news.length) { imgIndex = 0 }
+    imgIndex = (imgIndex + num + spaceData.news.length) % spaceData.news.length
     openImg(spaceData.news[imgIndex].img)
 }

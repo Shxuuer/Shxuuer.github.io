@@ -16,10 +16,15 @@ document.getElementById("scroll-down-icon").addEventListener('click', () => wind
 window.onload = () => document.getElementById("cover-img").style.transform = "scale(1)"
 
 // 获取Github信息
-const svgs = ['./githubInfo/1.svg', './githubInfo/2.svg', './githubInfo/3.svg']
+const svgs = ['./githubInfo/1.svg', './githubInfo/2.svg']
 svgs.forEach(svg => {
     fetch(svg).then(response => response.text()).then(data => {
         if (!data) { return }
         document.getElementById("github-container").innerHTML += data
     })
+})
+
+fetch('./githubInfo/3.svg').then(response => response.text()).then(data => {
+    if (!data) { return }
+    document.getElementById("skill-container").innerHTML += data
 })
